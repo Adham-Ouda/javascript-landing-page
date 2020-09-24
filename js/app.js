@@ -67,7 +67,7 @@ navBar();
 //  attaches a scroll handler to the window.
    window.addEventListener('scroll', function (event) {
 
-// looping over all sections to get the dimensions of every section    	
+// Looping for all sections to compare scroll y coordinate with the boundaries of sections to select the correct one.    	
 for(let i=0; i < sections.length; i++) {
 
    	if (sections[i].offsetTop <= window.scrollY && window.scrollY <= sections[i].offsetTop+sections[i].offsetHeight) {
