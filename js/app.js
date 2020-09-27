@@ -42,6 +42,7 @@ const navBar = () => {
 
 	// define a variable to build unordered list
     let navList = '';
+
     // geting all sections and looping over all off them
     sections.forEach(section => {
 
@@ -50,7 +51,7 @@ const navBar = () => {
         // get the section data-nav attribute value
         const sectionDataNav = section.getAttribute("data-nav"); 
         // define a list item for this section
-        navList += `<li><a class="menu__link" onclick="clFun(${sectionID})" href="#${sectionID}">${sectionDataNav}</a></li>`;
+        navList += `<li><a class="menu__link" onclick="clFun(${sectionID})">${sectionDataNav}</a></li>`;
 
 
 
@@ -90,4 +91,10 @@ for(let i=0; i < sections.length; i++) {
 
    });
 
-
+      
+// define clFun function to run when user click on any item on navigation bar
+function clFun(secId) { 
+  
+  // use scrollIntoView to scroll to the wanted section 
+  secId.scrollIntoView({behavior: "smooth", block: "start"});
+}
